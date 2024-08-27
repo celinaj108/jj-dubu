@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>200il Ginyum</title>
+    <!-- Import Styles -->
+    <link rel="stylesheet" href="./assets/mystyle.css" />
+    <!-- Import Vue.js -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+
+  <body>
+    <div id="app">
+        
+        <div class="image-display">
+          <div class="image-container">
+            <div class="images">
+              <img v-bind:src="image" class="center-image"> 
+              <!--v-bind: dynamically bind an attribute to an expression-->
+              <!--can use shorthand : in a way like img :src=~~ -->
+              <!--other uses include :alt="description", :href="url", 
+              :class="isActive", :style="isActive"-->
+            </div>
+            <div class="image-info">
+              <h1>{{ mypick }}</h1>
+              <p>Hover over the bubbles</p>
+              <!--v-show could be used in a way like <p v-show="inStock">In Stock</p>
+              but this will display nothing if inStock is false-->
+              <div class="color-circles">
+                <div 
+                    v-for="variant in variants" 
+                    :key="variant.id" 
+                    @mouseover="updateImage(variant.image)"
+                    class="color-circle"
+                    :style="{backgroundColor: variant.color}"> 
+                    <!--style object has CSS property of background color and assigning the variant color of the iteration
+                    there are camel cased property names and kebab cased property names-->
+                    {{variant.caption}}
+                </div>
+                <a href="letter.html" class="next">Next</a>
+                <a href="lockscreen.html" class="prev">Prev</a>
+            </div>
+            
+              <!--can use key to iterate through the category within the variant-->
+              <!--<div v-for="variant in variants" :key="variant.id">{{variant.size}}</div>-->
+            
+              <!--telling v-on what type of event to listen for, which is a click in this case
+              then method called from js when event occurs / shorthand for v-on is @ in a way @click~-->
+            </div>
+          </div>  
+        </div>
+    </div>
+
+    <!-- Import Js -->
+    <script src="./core.js"></script>
+
+    <!--Mount App-->
+      <script>
+      const mountedApp = app.mount('#app')
+      </script>
+  </body>
+</html>
