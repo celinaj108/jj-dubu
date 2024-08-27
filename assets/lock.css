@@ -1,0 +1,90 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f2f2f2;
+  margin: 0px;
+  font-family: Comic Sans MS;
+  color: #282828;
+}
+
+.lockscreen-container {
+  display: flex;
+  text-align: center;
+  flex-direction: column; /* Arrange children in a column */
+  justify-content: center; /* Center children vertically */
+  align-items: center; /* Center children horizontally */
+  height: 120px;
+  width: 200px;
+  padding: 40px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.lockscreen-container input {
+  display: block;
+  width: 150px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.lockscreen-container button {
+  padding: 10px 20px;
+  background-color: linen;
+  color: gray;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.lockscreen-container button:hover {
+  background-color: peachpuff;
+}
+
+
+#error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+.heart-container {
+  position: fixed;
+  bottom: 20px;
+  right: 50px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  background-color: pink;
+  transform: rotate(-45deg);
+  border: none; /* Remove any border that might create a shadow */
+  box-shadow: none; 
+}
+
+.heart-container::before,
+.heart-container::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: pink;
+  border-radius: 50%;
+  box-shadow: none; 
+}
+
+.heart-container::before {
+  top: -15px;
+  left: 0px;
+}
+
+.heart-container::after {
+  top: 0px;
+  left: 15px;
+}
+
+.heart-container button:hover {
+  background-color: hotpink;
+}
