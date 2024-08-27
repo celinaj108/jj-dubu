@@ -2,7 +2,7 @@ const app = Vue.createApp({
     data() {
         return{
             mypick: 'My POV of Us',
-            image: './assets/images/IMG_5573.JPG',
+            image: './assets/images/placeholder.jpeg',
             variants: [
                 { id: 1, color: 'lavender', caption: 'Pic I see when I miss you', image:'./assets/images/favpic.jpeg'},
                 { id: 2, color: 'lavenderblush', caption: 'Favorite Memory', image:'./assets/images/favmem.jpeg'},
