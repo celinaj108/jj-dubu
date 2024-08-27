@@ -9,7 +9,7 @@ const app = Vue.createApp({
                 { id: 3, color: 'lightblue', caption: 'Why I love you', image:'./assets/images/image 1.jpeg'},
                 { id: 4, color: 'thistle', caption: 'Favorite pic of us', image:'./assets/images/favus.jpeg'},
                 { id: 5, color: 'sandybrown', caption: 'Our thing', image:'./assets/images/ourthing.jpeg'},
-                { id: 6, color: 'darkseagreen', caption: 'First time in my life', image:'./assets/images/first.jpg'},
+                { id: 6, color: 'darkseagreen', caption: 'First time in my life', image:'./assets/images/first.png'},
                 { id: 7, color: 'darkcyan', caption: 'How I want you to see me', image:'./assets/images/princess.jpg'},
                 { id: 8, color: 'mistyrose', caption: 'Most flattering moment', image:'./assets/images/flattering.jpeg'},
                 { id: 9, color: 'plum', caption: 'Us until now', image:'./assets/images/us2.jpeg'},
